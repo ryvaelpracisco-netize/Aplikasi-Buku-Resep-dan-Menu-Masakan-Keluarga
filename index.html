@@ -3,10 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyek Kelompok</title>
+    <title>Buku Resep Keluarga</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Selamat Datang</h1>
-    <p>Ini adalah proyek kelompok kami.</p>
+
+    <header class="header">
+        <div class="logo">🍲 Dapur Keluarga</div>
+        <p>Kumpulan resep masakan favorit keluarga</p>
+    </header>
+
+    <nav class="navbar">
+        <a href="#beranda">Beranda</a>
+        <a href="#resep">Daftar Resep</a>
+        <a href="#tambah-resep">Tambah Resep</a>
+    </nav>
+
+    <main class="container" id="beranda">
+
+        <section class="hero">
+            <h1>Selamat Datang di Buku Resep Keluarga</h1>
+            <p>Temukan inspirasi masakan lezat untuk keluarga tercinta.</p>
+            <a href="#resep" class="btn">Lihat Resep</a>
+        </section>
+
+        <section id="resep">
+            <h2>Daftar Resep Masakan</h2>
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Cari nama masakan..."
+                aria-label="Cari resep masakan"
+            >
+
+            <div id="recipeList" class="recipe-list"></div>
+            <p id="emptyMessage" hidden>Resep tidak ditemukan.</p>
+        </section>
+
+        <section id="tambah-resep" class="form-section">
+            <h2>Tambah Resep Baru</h2>
+
+            <form id="recipeForm">
+                <label for="recipeName">Nama Masakan</label>
+                <input
+                    type="text"
+                    id="recipeName"
+                    placeholder="Contoh: Nasi Goreng"
+                    required
+                >
+
+                <label for="recipeCategory">Kategori Masakan</label>
+                <select id="recipeCategory" required>
+                    <option value="">Pilih kategori</option>
+                    <option value="Makanan Utama">Makanan Utama</option>
+                    <option value="Lauk">Lauk</option>
+                    <option value="Sayuran">Sayuran</option>
+                    <option value="Minuman">Minuman</option>
+                    <option value="Camilan">Camilan</option>
+                </select>
+
+                <label for="recipeIngredients">Bahan-bahan</label>
+                <textarea
+                    id="recipeIngredients"
+                    placeholder="Tuliskan bahan-bahan, pisahkan setiap bahan dengan koma"
+                    required
+                ></textarea>
+
+                <label for="recipeSteps">Langkah Memasak</label>
+                <textarea
+                    id="recipeSteps"
+                    placeholder="Tuliskan langkah memasak secara berurutan"
+                    required
+                ></textarea>
+
+                <button type="submit" class="btn">
+                    Simpan Resep
+                </button>
+            </form>
+            <p id="formMessage" role="status"></p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Buku Resep Keluarga</p>
+        <p>Dibuat untuk menyimpan resep masakan favorit keluarga.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
+
