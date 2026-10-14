@@ -46,6 +46,7 @@ Aplikasi menggunakan localStorage browser.
 Data tersimpan pada browser dan perangkat yang sama.
 
 ## Pengembang
-Nama: Isi nama anggota kelompok
-NIM: Isi NIM anggota kelompok
-Mata Kuliah: Isi nama mata kuliah
+Nama: Ryvael pracisco dan naila ramadhani 
+NIM: 3312611019 dan 3312611020
+Mata Kuliah: perangkat proyek perangkat lunak 
+
